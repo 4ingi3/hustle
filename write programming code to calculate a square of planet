@@ -1,0 +1,19 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func calculateSurfaceArea(radius float64) float64 {
+	return 4 * math.Pi * math.Pow(radius, 2)
+}
+
+func main() {
+	var radius float64
+	fmt.Print("Enter the radius of the planet: ")
+	fmt.Scan(&radius)
+
+	surfaceArea := calculateSurfaceArea(radius)
+	fmt.Printf("The surface area of the planet is: %.2f square units\n", surfaceArea)
+}
